@@ -15,10 +15,7 @@
     --color-primary-900: #0c4a6e;
     --color-primary-950: #082f49;
 
-    /* Анимации */
-    --animate-glow: glow 2s ease-in-out infinite alternate;
-    --animate-shimmer: shimmer 2s linear infinite;
-    --animate-float: float 3s ease-in-out infinite;
+
 
     @keyframes glow {
         0% {

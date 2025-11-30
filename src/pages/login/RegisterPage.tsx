@@ -34,7 +34,7 @@ export const RegisterPage = () => {
         return (
             <div
                 className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
-                <Card className="w-full max-w-md" hover glow>
+                <Card className="w-full max-w-md">
                     <div className="text-center mb-8">
                         <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
                             Создать аккаунт
@@ -90,9 +90,9 @@ export const RegisterPage = () => {
                     </form>
 
                     <div className="mt-6 text-center">
-          <span className="text-gray-600 dark:text-gray-400">
+            <span className="text-gray-600 dark:text-gray-400">
             Уже есть аккаунт?{' '}
-          </span>
+            </span>
                         <Link
                             to="/login"
                             className="text-primary-600 hover:text-primary-700 font-medium"

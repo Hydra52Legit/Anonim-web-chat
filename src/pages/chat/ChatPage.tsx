@@ -3,6 +3,7 @@ import { useAuth } from '../../app/hooks/use-auth.ts'
 import { useNavigate } from 'react-router-dom'
 import { Card } from '../../shared/ui/Card.tsx'
 import { Button } from '../../shared/ui/Button'
+import {ChatBubbleOvalLeftEllipsisIcon} from "@heroicons/react/20/solid";
 
 export const ChatPage = () => {
     const { user, logout } = useAuth()
@@ -31,7 +32,11 @@ export const ChatPage = () => {
                 </header>
 
                 <Card className="p-8 text-center" hover>
-                    <div className="text-6xl mb-4">💬</div>
+                    <div className="flex items-center justify-center">
+                        <ChatBubbleOvalLeftEllipsisIcon className="size-12 text-white"/>
+                    </div>
+
+
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                         Чат скоро будет доступен!
                     </h2>
