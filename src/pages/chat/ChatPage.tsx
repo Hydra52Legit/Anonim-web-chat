@@ -1,5 +1,5 @@
-// pages/chat-page.tsx
-import { useAuth } from '../../app/hoocks/use-auth.ts'
+
+import { useAuth } from '../../app/hooks/use-auth.ts'
 import { useNavigate } from 'react-router-dom'
 import { Card } from '../../shared/ui/Card.tsx'
 import { Button } from '../../shared/ui/Button'
@@ -22,7 +22,7 @@ export const ChatPage = () => {
                     </h1>
                     <div className="flex items-center gap-4">
             <span className="text-gray-700 dark:text-gray-300">
-              Привет, {user?.name}!
+                Привет, {user?.name}!
             </span>
                         <Button variant="ghost" onClick={handleLogout}>
                             Выйти

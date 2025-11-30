@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import {useThemeValue} from "./use-theme"
+import {useThemeValue} from "../../../app/hooks/use-theme.ts"
 
 
 export const useThemeEffect = () => {

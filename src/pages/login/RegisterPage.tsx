@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import {useAuth} from "../../app/hoocks/use-auth"
+import {useAuth} from "../../app/hooks/use-auth"
 import {useNavigate, Link} from 'react-router-dom'
 import { Card } from '../../shared/ui/Card'
 import { Button } from '../../shared/ui/Button'

@@ -1,8 +1,8 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
-import { useAuth } from '../../app/hoocks/use-auth.ts'
-import { LoginPage } from '../../pages/login/login-page.tsx'
-import { RegisterPage } from '../../pages/login/register-page.tsx'
-import { ChatPage } from '../../pages/chat/chat-page.tsx'
+import { useAuth } from '../hooks/use-auth.ts'
+import { LoginPage } from '../../pages/login/LoginPage.tsx'
+import { RegisterPage } from '../../pages/login/RegisterPage.tsx'
+import { ChatPage } from '../../pages/chat/ChatPage.tsx'
 import type {ReactNode} from "react";
 
 const ProtectedRoute = ({ children }: {children: ReactNode}) => {
