@@ -1,12 +1,16 @@
 
-import { Router } from './router'
-import { AppProviders } from './providers'
+import { Router } from './router/router.tsx'
+import { AppProviders } from './providers/app-providers'
+import {BrowserRouter} from 'react-router-dom'
 import '../index.css'
 
 export const App = () => {
     return (
-        <AppProviders>
-            <Router />
-        </AppProviders>
+        <BrowserRouter>
+            <AppProviders>
+                <Router />
+            </AppProviders>
+        </BrowserRouter>
+
     )
 }
