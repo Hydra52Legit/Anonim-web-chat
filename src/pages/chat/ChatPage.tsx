@@ -1,33 +1,40 @@
 
 import { Card } from '../../shared/ui/Card.tsx'
-// import { Button } from '../../shared/ui/Button'
+import { Button } from '../../shared/ui/Button'
 import {ChatBubbleOvalLeftEllipsisIcon} from "@heroicons/react/20/solid";
 import {HeaderChatPage} from "../../widgets/HeaderChatPage.tsx";
-// import {useAuthActions} from "../../app/hooks/auth.ts";
+import {ChatWidget} from "../../widgets/ChatWidget.tsx";
+import {useState} from "react";
 
 export const ChatPage = () => {
 
-    // const {user, handleLogout} = useAuthActions();
+    const [isChatOpen, setIsChatOpen] = useState(false)
+
     return (
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 p-4">
-            <div className="max-w-4xl mx-auto">
-                <HeaderChatPage/>
-                <Card className="p-8 text-center">
-                    <div className="flex items-center justify-center">
-                        <ChatBubbleOvalLeftEllipsisIcon className="size-12 text-white"/>
-                    </div>
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+            <HeaderChatPage/>
+            <Card className="max-w-md mx-auto">
+                <div className="text-center p-8">
+                    <ChatBubbleOvalLeftEllipsisIcon className="text-blue-600 dark:text-blue-400 size-16 transition-transform hover:scale-110" />
+                </div>
+                <p className="text-gray-600 dark-text-gray-300">
+                    Начните общение с другими пользователями
+                </p>
+                <Button
+                    variant={'primary'}
+                    size="sm"
+                    loading={false}
+                    className="mt-4"
+                    onClick={() => setIsChatOpen(true)}
+                >
+                    Начать общение
+                </Button>
 
-
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                        Чат скоро будет доступен!
-                    </h2>
-                    <p className="text-gray-600 dark:text-gray-400 mb-6">
-                        Мы работаем над созданием удивительного чата.
-                        Скоро вы сможете общаться с друзьями и коллегами.
-                    </p>
-
-                </Card>
-            </div>
+            </Card>
+            <ChatWidget
+                isOpen={isChatOpen}
+                onClose={() => setIsChatOpen(false)}
+            />
         </div>
     )
 }
